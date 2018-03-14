@@ -8,7 +8,7 @@
     <Product>OrleansTestKit</Product>
     <Description>A testing framework for Microsoft Orleans that does not use a real silo</Description>
     <Copyright>Copyright ©  2017</Copyright>
-    <Version>2.0.0-beta4</Version>
+    <Version>2.0.0-RC1</Version>
   </PropertyGroup>
   
   <ItemGroup>
@@ -17,6 +17,7 @@
     <PackageReference Include="Microsoft.Orleans.OrleansProviders" Version="2.0.0-rc1" />
     <PackageReference Include="Microsoft.Orleans.OrleansRuntime" Version="2.0.0-rc1" />
     <PackageReference Include="Microsoft.Orleans.Core" Version="2.0.0-rc1" />
+    <PackageReference Include="Microsoft.Orleans.Runtime.Abstractions" Version="2.0.0-rc1" />
     <PackageReference Include="Microsoft.Orleans.Runtime.Legacy" Version="2.0.0-rc1" />
     <PackageReference Include="Moq" Version="4.7.145" />
   </ItemGroup>

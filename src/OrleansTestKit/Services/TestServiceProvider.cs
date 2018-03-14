@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using Microsoft.Extensions.DependencyInjection;
 using Moq;
+using Orleans.Runtime;
 using Orleans.Streams;
 
 namespace Orleans.TestKit.Services
@@ -12,7 +12,7 @@ namespace Orleans.TestKit.Services
 
         private readonly Dictionary<Type, object> _services;
 
-        private IStreamProviderManager _streamProviderManager;
+        private IKeyedServiceCollection<string, IStreamProvider> _streamProviderManager;
 
         public TestServiceProvider(TestKitOptions options)
         {
@@ -47,7 +47,7 @@ namespace Orleans.TestKit.Services
             }
         }
 
-        internal void AddStreamProvider(IStreamProviderManager streamProviderManager)
+        internal void AddStreamProvider(IKeyedServiceCollection<string, IStreamProvider> streamProviderManager)
         {
             _streamProviderManager = streamProviderManager;
         }
