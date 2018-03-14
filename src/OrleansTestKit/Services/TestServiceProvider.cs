@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using Moq;
-using Orleans.Runtime;
-using Orleans.Streams;
 
 namespace Orleans.TestKit.Services
 {
@@ -11,8 +9,6 @@ namespace Orleans.TestKit.Services
         private readonly TestKitOptions _options;
 
         private readonly Dictionary<Type, object> _services;
-
-        private IKeyedServiceCollection<string, IStreamProvider> _streamProviderManager;
 
         public TestServiceProvider(TestKitOptions options)
         {
@@ -45,11 +41,6 @@ namespace Orleans.TestKit.Services
 
                 return service;
             }
-        }
-
-        internal void AddStreamProvider(IKeyedServiceCollection<string, IStreamProvider> streamProviderManager)
-        {
-            _streamProviderManager = streamProviderManager;
         }
 
         public Mock<T> AddServiceProbe<T>(Mock<T> mock) where T : class
