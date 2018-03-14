@@ -12,8 +12,12 @@
   </PropertyGroup>
   
   <ItemGroup>
-    <PackageReference Include="Microsoft.Orleans.OrleansRuntime" Version="2.0.0-beta2" />
-    <PackageReference Include="Microsoft.Orleans.Core" Version="2.0.0-beta2" />
+    <PackageReference Include="Microsoft.Orleans.Core.Abstractions" Version="2.0.0-rc1" />
+    <PackageReference Include="Microsoft.Orleans.Core.Legacy" Version="2.0.0-rc1" />
+    <PackageReference Include="Microsoft.Orleans.OrleansProviders" Version="2.0.0-rc1" />
+    <PackageReference Include="Microsoft.Orleans.OrleansRuntime" Version="2.0.0-rc1" />
+    <PackageReference Include="Microsoft.Orleans.Core" Version="2.0.0-rc1" />
+    <PackageReference Include="Microsoft.Orleans.Runtime.Legacy" Version="2.0.0-rc1" />
     <PackageReference Include="Moq" Version="4.7.145" />
   </ItemGroup>
 </Project>
